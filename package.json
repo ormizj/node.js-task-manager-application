@@ -6,8 +6,11 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "env-cmd config/test.env node --experimental-vm-modules node_modules/jest/bin/jest.js --watch --runInBand",
     "dev": "env-cmd config/dev.env nodemon src/index.js -e js"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "keywords": [],
   "author": "",
@@ -26,6 +29,8 @@
   "devDependencies": {
     "env-cmd": "^8.0.2",
     "eslint": "^8.4.1",
-    "nodemon": "^2.0.15"
+    "jest": "^23.6.0",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.1.6"
   }
 }
