@@ -10,7 +10,8 @@
     "dev": "env-cmd config/dev.env nodemon src/index.js -e js"
   },
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "transform": {}
   },
   "keywords": [],
   "author": "",
@@ -29,7 +30,7 @@
   "devDependencies": {
     "env-cmd": "^8.0.2",
     "eslint": "^8.4.1",
-    "jest": "^23.6.0",
+    "jest": "^27.4.5",
     "nodemon": "^2.0.15",
     "supertest": "^6.1.6"
   }
